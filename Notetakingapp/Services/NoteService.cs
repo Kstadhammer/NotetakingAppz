@@ -15,6 +15,7 @@ namespace Notetakingapp.Services
         {
             using var writer = new StreamWriter(_filePath, true);
             writer.WriteLine($"=== Note Entry ===");
+            writer.WriteLine($"ID: {note.Id}");
             writer.WriteLine($"Created: {note.CreatedAt:yyyy-MM-dd HH:mm:ss}");
             writer.WriteLine($"Title: {note.Title.Trim()}");
             writer.WriteLine($"Content:");
